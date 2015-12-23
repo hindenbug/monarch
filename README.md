@@ -9,14 +9,14 @@ DoNotDisturb is a throttle for communication via APN &amp; GCM push notification
 # Getting Started
 
 ```python
-import dnd
-dnd.configure()
-dnd.config.rule.add('notification', 'promotion', 60)
+import monarch
+monarch.configure()
+monarch.config.rule.add('notification', 'promotion', 60)
 
 array = []
-with dnd.throttle('notification', 10, 'promotion') as pipe:
+with monarch.throttle('notification', 10, 'promotion') as pipe:
     if pipe: array.append(1)
-with dnd.throttle('notification', 10, 'promotion') as pipe:
+with monarch.throttle('notification', 10, 'promotion') as pipe:
 	if pipe: array.append(2)
 
 print array

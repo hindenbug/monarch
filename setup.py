@@ -16,7 +16,7 @@ setup(name='monarch',
       author_email='backend+monarch@peppertap.com',
       license = "MIT",
       keywords = "monarch, dnd, DoNotDisturb",
-      url='https://github.com/Peppertap/Monarch',
+      url='https://github.com/Peppertap/monarch',
       test_suite='nose.collector',
       tests_require=['nose', 'ludibrio'],
 )
