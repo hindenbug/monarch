@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Peppertap/monarch.svg)](https://travis-ci.org/Peppertap/monarch)
+
 # Monarch
 Monarch is a throttle for communication via APN &amp; GCM push notifications.
 
