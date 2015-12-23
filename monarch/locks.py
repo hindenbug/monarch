@@ -1,4 +1,3 @@
-
 class Lock:
 
     def __init__(self, config, pattern):
@@ -12,7 +11,7 @@ class Lock:
         key = self.key(channel, user, category)
         self.config.redis.lpush(key, timestamp)
         self.config.redis.ltrim(key, 0, self.config.cache_size)
-        
+
     def key(self, channel, user, category):
         return self.pattern % (self.config.namespace, channel, user, category)
 

@@ -1,5 +1,5 @@
 # Monarch
-Monarch is a throttle for communication via APN &amp; GCM push notifications. 
+Monarch is a throttle for communication via APN &amp; GCM push notifications.
 
 
 # Install
@@ -24,11 +24,18 @@ print array
 ```
 # Development
 
+```
 	$ python setup.py develop
+```
+
+# Tests
+```
+  $ python setup.py test
+```
 
 # Publish
 
+```
 	$ python setup.py sdist
 	$ python setup.py sdist upload
-
-
+```

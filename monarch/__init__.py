@@ -1,7 +1,7 @@
 from contextlib import contextmanager
-from dnd.configuration import Config
-from dnd.rules import Rule
-from dnd.locks import Lock
+from monarch.configuration import Config
+from monarch.rules import Rule
+from monarch.locks import Lock
 
 import redis
 import datetime
