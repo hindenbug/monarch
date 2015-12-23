@@ -1,5 +1,5 @@
-# DoNotDisturb
-DoNotDisturb is a throttle for communication via APN &amp; GCM push notifications. 
+# Monarch
+Monarch is a throttle for communication via APN &amp; GCM push notifications. 
 
 
 # Install
