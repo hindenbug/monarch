@@ -4,7 +4,7 @@ Monarch is a throttle for communication via APN &amp; GCM push notifications.
 
 # Install
 
-	$ python setup.py install
+	$ pip install monarch-dnd
 
 # Getting Started
 
@@ -33,9 +33,3 @@ print array
   $ python setup.py test
 ```
 
-# Publish
-
-```
-	$ python setup.py sdist
-	$ python setup.py sdist upload
-```
