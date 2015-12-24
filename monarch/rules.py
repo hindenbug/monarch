@@ -1,5 +1,6 @@
 '''Rule helper class'''
 class Rule:
+
     def __init__(self, config, pattern):
         self.pattern = pattern
         self.config = config

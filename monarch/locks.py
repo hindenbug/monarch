@@ -8,9 +8,12 @@ class Lock:
         '''Add a system wide lock
         This lock is applicable to everyone sharing this Redis system.
         '''
-        key = self.key(channel, user, category)
-        self.config.redis.lpush(key, timestamp)
-        self.config.redis.ltrim(key, 0, self.config.cache_size)
+        if channel and user and category:
+            key = self.key(channel, user, category)
+            self.config.redis.lpush(key, timestamp)
+            self.config.redis.ltrim(key, 0, self.config.cache_size)
+        else:
+            raise TypeError
 
     def key(self, channel, user, category):
         return self.pattern % (self.config.namespace, channel, user, category)
@@ -28,5 +31,5 @@ class Lock:
         return keys
 
     def remove(self, channel, user, category):
-        rule_key = self.key_pattern % (self.key_namespace, channel, user, category)
-        config.redis.delete(rule_key)
+        rule_key = self.pattern % (self.config.namespace, channel, user, category)
+        self.config.redis.delete(rule_key)
